@@ -1,24 +1,20 @@
 package com.uceva.micro_servicio_lib_arq.codec;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.uceva.micro_servicio_lib_arq.ejemploc.lib.JavaCodeC;
+import libcodec.JavaCodec;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/art")
 public class codecRestController {
-     private JavaCodeC miJavaCodeC;
+    private JavaCodec miJavaCodeC;
 
-     public codecRestController(){
-        this.miJavaCodeC = new JavaCodeC();
-     }
+    public codecRestController() {
+        this.miJavaCodeC = new JavaCodec();
+    }
 
-     @PostMapping("/code/{codigo}")
-     public String codec(@PathVariable String codigo){
+    @PostMapping("/code")
+    public String codec(@RequestBody String codigo) {
         return miJavaCodeC.codigo(codigo);
-     }
+    }
+
 }

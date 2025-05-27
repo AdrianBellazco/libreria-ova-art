@@ -1,10 +1,10 @@
-package com.uceva.micro_servicio_lib_arq.ejemploc.lib;
+package libcodec;
 
-public class JavaCodeC {
+public class JavaCodec {
 
     public native String codigo(String codigo);
-    
-    public JavaCodeC(){
+
+    public JavaCodec(){
         try {
             System.loadLibrary("codec");
             System.out.println("Biblioteca cargada exitosamente!");
@@ -12,4 +12,5 @@ public class JavaCodeC {
             System.err.println("Carga de la biblioteca fallida: "+e.getMessage());
         }
     }
+
 }
