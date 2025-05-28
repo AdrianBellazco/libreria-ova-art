@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import libcompilador.JavaCompilador;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/art")
 public class codecRestController {
     private JavaCompilador miJavaCodeC;
