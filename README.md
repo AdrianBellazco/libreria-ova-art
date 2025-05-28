@@ -38,7 +38,7 @@ Este proyecto demuestra cómo comunicar una aplicación Spring Boot con una bibl
 3. Ejecuta el siguiente comando para construir la imagen Docker:
 
 ```bash
-docker build -t alvarosalazar/spring-jni:latest .
+docker build -t adriansa02/art2705-2:latest .
 ```
 
 ### 5. Ejecutar la Aplicación usando Docker Compose
